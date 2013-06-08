@@ -1,0 +1,74 @@
+Note: we're looking for Ruby commands for the below questions, not the actual answers, unless it's a question. 
+
+Hint: you can type "irb" in your terminal to get a Ruby console to test things out. For multi-line code, use an editor that can run Ruby code, or copy/paste into irb.
+
+Hint 2: you can refer to the Ruby doc for Array and Hash here: 
+
+http://www.ruby-doc.org/core-1.9.3/Array.html
+http://www.ruby-doc.org/core-1.9.3/Hash.html
+
+
+1. Use the "each" method of Array to iterate over [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], and print out each value.
+
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+arr.each do |element]
+  puts element
+end
+
+2. Same as above, but only print out values greater than 5.
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+arr.each do |element]
+If  element > 5
+   puts element    
+end
+end
+3. Now, using the same array from #2, use the "select" method to extract all odd numbers into a new array.
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+arr.select do |n]
+ n.odd?
+end
+
+4. Append "11" to the end of the array. Prepend "0" to the beginning.
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+arr << 11
+arr.unshift(0)
+
+5. Get rid of "11". And append a "3".
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+arr << 11
+arr.unshift(0)
+arr.pop  
+arr << 3  
+
+6. Get rid of duplicates without specifically removing any one value. 
+arr.unique = returns a new array that eliminates uniques, does not modi the original array.
+
+7. What's the major difference between an Array and a Hash?
+hash = key value pair
+Array  have order, a sequence of elements. Indexed numerically starting with 0
+
+8. Create a Hash using both Ruby 1.8 and 1.9 syntax.
+1.8  syntax -        h2 = {a: 1, b:  2, c 3}       
+
+1.9  syntax -        h = = {a:1, b:2, c:3, d:4}      
+
+9. Get the value of key "b".
+h[:b]  would equal 2
+
+10. Add to this hash the key:value pair {e:5}
+h[:e] = 5	
+
+13. Remove all key:value pairs whose value is less than 3.5
+h.delete_if do |k,v|   
+v < 3.5
+end
+
+14. Can hash values be arrays? Can you have an array of hashes? (give examples)
+h[:f]  = [1, 2, 3]   ## hash of arrays    
+a = [{a:1, b:2}, {c:3, a:5}, {b:3}]     
+
+15. Look at several Rails/Ruby online API sources and say which one your like best and why.
+
+http://ruby.railstutorial.org It seems like the easiest to use.
+
+
